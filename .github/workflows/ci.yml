@@ -20,8 +20,8 @@ jobs:
           path: app.tar
   test:
     steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: app.tar
-      - run: tar xf app.tar/app.tar
-      - run: ./app/app
+        - uses: actions/download-artifact@v3
+          with:
+            name: app.tar
+        - run: tar xf app.tar/app.tar
+        - run: ./app/app
